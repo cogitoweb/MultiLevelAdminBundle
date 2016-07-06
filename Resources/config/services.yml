@@ -1,0 +1,6 @@
+parameters:
+
+services:
+#    cogitoweb_multi_level_admin.example:
+#        class: Cogitoweb\MultiLevelAdminBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

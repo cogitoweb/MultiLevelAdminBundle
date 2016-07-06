@@ -1,0 +1,23 @@
+{
+	"name"        : "cogitoweb/multi-level-admin-bundle",
+	"description" : "Multi-level extension of SonataAdminBundle",
+	"type"        : "symfony-bundle",
+	"keywords"    : ["sonata", "admin", "multi-level", "multi level", "multilevel"],
+	"homepage"    : "https://github.com/cogitoweb/AdminBundle",
+	"license"     : "MIT",
+	"authors"     : [{
+		"name"  : "Daniele Artico",
+		"email" : "daniele.artico@cogitoweb.it"
+	}],
+	"require"     : {
+        "sonata-project/admin-bundle": "3.3.*"
+    },
+    "autoload"    : {
+        "psr-4" : { "Cogitoweb\\MultiLevelAdminBundle\\" : "" }
+    },
+	"extra"       : {
+		"branch-alias" : {
+			"dev-master" : "3.3-dev"
+		}
+	}
+}

@@ -1,0 +1,5 @@
+restful_admin_api:
+    resource:    "@CogitowebMultiLevelAdminBundle/Controller/CRUDController.php"
+    type:        rest
+    prefix:      /api/admin/{_sonata_admin}
+    name_prefix: api_admin_
