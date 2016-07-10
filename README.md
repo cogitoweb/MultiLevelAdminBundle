@@ -60,7 +60,8 @@ Like all other bundles, to enable CogitowebMultiLevelAdminBundle add it in `app/
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
-			new FOS\RestBundle\FOSRestBundle(), // Optional: needed by RESTful Admin API
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new FOS\RestBundle\FOSRestBundle(), // Optional: needed by RESTful Admin API
 	        new Cogitoweb\MultiLevelAdminBundle\CogitowebMultiLevelAdminBundle(),
             ...
 ```
