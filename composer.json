@@ -10,13 +10,15 @@
 		"email" : "daniele.artico@cogitoweb.it"
 	}],
 	"require"     : {
-        "sonata-project/admin-bundle":              "3.3.*",
-        "sonata-project/doctrine-orm-admin-bundle": "^3.0",
-        "friendsofsymfony/rest-bundle":             "^1.7"
-    },
-    "autoload"    : {
-        "psr-4" : { "Cogitoweb\\MultiLevelAdminBundle\\" : "" }
-    },
+		"php"                                      : ">=5.4.0",
+		"sonata-project/admin-bundle"              : "3.3.*",
+		"sonata-project/doctrine-orm-admin-bundle" : "^3.0",
+		"friendsofsymfony/rest-bundle"             : "^1.7",
+		"jms/serializer-bundle"                    : "^1.0"
+	},
+	"autoload"    : {
+		"psr-4" : { "Cogitoweb\\MultiLevelAdminBundle\\" : "" }
+	},
 	"extra"       : {
 		"branch-alias" : {
 			"dev-master" : "3.3-dev"
