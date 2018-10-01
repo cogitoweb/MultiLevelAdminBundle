@@ -174,8 +174,9 @@ class CRUDController extends SonataCRUDController
 			$form->setData($object);
 
 			// Cogitoweb: normalize API call data before handling
-			$data = $this->normalizeApiCallData($request);
-			$form->handleRequest($data);
+//			$data = $this->normalizeApiCallData($request);
+//			$form->handleRequest($data);
+			$form->handleRequest($request);
 
 			$isFormValid = $form->isValid();
 
