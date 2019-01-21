@@ -173,6 +173,8 @@ class CRUDController extends SonataCRUDController
 			$form = $this->admin->getForm();
 			$form->setData($object);
 
+			$request = $this->updateRequest($request, $form);
+
 			// Cogitoweb: normalize API call data before handling
 //			$data = $this->normalizeApiCallData($request);
 //			$form->handleRequest($data);
@@ -360,7 +362,7 @@ class CRUDController extends SonataCRUDController
 		$request = $this->getRequest();
 		$url     = $request->getRequestUri();
 
-		return (boolean) strpos($url, self::RESTFUL_ADMIN_API_PREFIX);
+		return (boolean) false !== strpos($url, self::RESTFUL_ADMIN_API_PREFIX);
 	}
 
 	/**
@@ -408,4 +410,19 @@ class CRUDController extends SonataCRUDController
 
 		return $errors;
 	}
+
+    /**
+     * Update request to match form name
+     *
+     * @param Request $request
+     * @param FormInterface $form
+     *
+     * @return Request
+     */
+	protected function updateRequest(Request $request, FormInterface $form)
+    {
+        $request->request->replace([$form->getName() => $request->request->all()]);
+
+        return $request;
+    }
 }
